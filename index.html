@@ -37,11 +37,11 @@
                         
                         <div class="conteneur__input">
                             <label for="prenom">Prénom</label>
-                            <input type="text" id="prenom" name="prenom" >                                       
+                            <input type="text" id="prenom" name="prenom" required>                                       
                         </div>
                         <div>
                             <label for="nom">Nom</label>
-                            <input type="text" id="nom" name="nom" >                 
+                            <input type="text" id="nom" name="nom" required>                 
                         </div>
 
                         <span id="erreurNom" class="zone-champ__message-erreur"></span>
@@ -50,21 +50,21 @@
                     <div class="fieldset-contact-interieur">
                         <div class="conteneur__input">
                             <label for="adresse">Adresse</label>
-                            <input type="text" id="adresse" name="adresse" >                  
+                            <input type="text" id="adresse" name="adresse" required>                  
                         </div>
                         <span id="erreurAdresse" class="zone-champ__message-erreur">Avertissement adresse</span>  
 
                         <div class="conteneur__input">
                             <label for="ville">Ville</label>
-                            <input type="text" id="ville" name="ville" >                 
+                            <input type="text" id="ville" name="ville" required>                 
                         </div>
                         <span id="erreurVille" class="zone-champ__message-erreur">Avertissement, ville</span>   
 
 
                         <div class="conteneur__input">
                             <label for="province">Province/états</label>
-                            <select name="province" id="province">
-                                <option class="selectionner__option" value="" selected disabled hidden>--------Sélectionner--------</option>
+                            <select name="province" id="province"  required>
+                                <option class="selectionner__option" value="" selected>Sélectionner</option>
                                 <option value="quebec">Québec</option>
                                 <option value="ontario">Ontario</option>
                                 <option value="colombie-brittanique">Colombie-Brittanique</option>
@@ -74,14 +74,14 @@
                         <span id="erreurProvince" class="zone-champ__message-erreur">Avertissement, province</span>   
                         <div class="conteneur__input">
                             <label for="code-postal">Code postal</label>
-                            <input type="text" id="code-postal" name="code-postal" >                
+                            <input type="text" id="code-postal" name="code-postal"  pattern="[A-Za-z][0-9][A-Za-z] [0-9][A-Za-z][0-9]" minlength="6" maxlength="6" required>                
                         </div>
                         <span id="erreurCodePostal" class="zone-champ__message-erreur">Avertissement, code postal</span>  
 
 
                         <div class="conteneur__input">
                             <label for="courriel">Courriel</label>
-                            <input type="email" id="courriel" name="courriel" >                   
+                            <input type="email" id="courriel" name="courriel" required>                   
                         </div>
                         <span id="erreurCourriel" class="zone-champ__message-erreur">Avertissement, courriel</span>                     
                     </div>
@@ -89,10 +89,10 @@
                         <legend>Téléphone (indicatif - numéro)</legend>
                         <div>
                             <label for="indicatif">indicatif</label>
-                            <input type="number" name="indicatif" id="indicatif">
+                            <input type="tel" name="indicatif" id="indicatif" minlength="3" maxlength="3" required>
 
                             <label for="numero">Numéro</label>
-                            <input type="tel" name="numero" id="numero">
+                            <input type="tel" name="numero" id="numero" minlength="7" maxlength="7" required>
                         </div>
                         <span id="erreurTelephone" class="zone-champ__message-erreur">Avertissement, téléphone</span>
                     </fieldset>
@@ -104,15 +104,15 @@
                     <legend>Date à laquelle la question à été posée</legend>
                     <div class="conteneur__input">
                         <label for="jour">Jour</label>
-                        <input type="number" min="1" max="31" name="jour" id="jour"> 
+                        <input type="number" min="1" max="31" name="jour" id="jour" required> 
                     </div>
 
                     <div class="conteneur__input">
                         <label for="mois">Mois</label>
-                        <select name="mois" id="mois">
-                            <option class="selectionner__option" value="0" selected disabled hidden>Sélectionner</option>
+                        <select name="mois" id="mois" required>
+                            <option class="selectionner__option" value="0" selected>Sélectionner</option>
                             <option value="1">Janvier</option>
-                            <option value="1">Février</option>
+                            <option value="2">Février</option>
                             <option value="3">Mars</option>
                             <option value="4">Avril</option>
                             <option value="5">Mai</option>
@@ -128,16 +128,16 @@
 
                     <div class="conteneur__input">
                         <label for="annee">Année</label>
-                        <input type="number" min="1900" max="2100" step="1" value="2022" name="annee" id="annee"> 
+                        <input type="number" min="1900" max="2100" step="1" value="2022" name="annee" id="annee" required> 
                     </div>
-                    <span id="erreurTelephone" class="zone-champ__message-erreur">Avertissement SVP, entrez la date complète.</span>
+                    <span id="erreurDate" class="zone-champ__message-erreur">Avertissement SVP, entrez la date complète.</span>
                     
                 </fieldset>
                 <fieldset>
                     <legend>Lequel de ces monuments est un mausolée?</legend>
                     <ul>
                         <li>
-                        <input type="radio" id="reglement" name="reglement" value="reglement">
+                        <input type="radio" id="reglement" name="reglement" value="reglement" required>
                         <img src="images/chateaudIf-small.jpg" alt="">
                         <label class="radio__label" for="image3">Le château d'If</label>                               
                         </li>
@@ -159,7 +159,7 @@
                 </fieldset>
             </fieldset>
                 <div class="conteneur__input">
-                    <input type="checkbox" id="reglement" name="reglement" value="reglement">
+                    <input type="checkbox" id="reglement" name="reglement" value="reglement" required>
                     <label class="checkbox__label" for="reglement">J'ai lu et j'accepte le <a href="#">Règlement du concours</a> et je confirme avoir atteint l'âge de majorité dans ma province de résidence.</label>                    
                 </div>
                 <span id="erreurTelephone" class="zone-champ__message-erreur">Avertissement SVP, acceptez le règlement du concours.</span>
