@@ -1,0 +1,180 @@
+<!doctype html>
+<html lang="fr">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1.0">
+    <link rel="icon" href="../images/favicon.png" type="image/png"/>
+    <link rel="shortcut icon" href="../images/favicon.png" type="image/png"/>
+    <meta name="description" content="Mieux comprendre les dangers potentielles des conditions météorologique sur les routes aux Canada">
+    <meta name="keywords" content="">
+    <link href="../css/styles.css" rel="stylesheet" type="text/css" media="all">
+    <title>Concours - Radio Canada</title> 
+</head>
+<body class="concours">
+    <header>
+        <picture class="bandeau">
+            <source media="(min-width:1200px)" srcset="images/bandeau_1200.jpg">
+            <source media="(min-width:600px)" srcset="images/bandeau_600.jpg">
+            <img src="images/bandeau_1200.jpg" alt="neige-quebec">
+        </picture>                  
+    </header>
+    <main class="contact__main">
+        <h1 class="titre">Concours</h1> 
+        <p> Complétez le coupon de participation et répondez à la question du jour ci-dessous.!</p>
+        <p> 30 finalistes accompagnés seront invités le jeudi 1er mars au restaurant
+            Blumenthal pour un petit déjeuner préparé par le chef Rémi Brunelle. Parmi
+            les finalistes présents, un grand gagnant s’envolera vers la destination de
+            son choix!</p>
+        <p> Vous avez jusqu'au vendredi 9 février à midi pour participer. Bonne chance
+            à tous</p>
+
+        <form class="contact__form" action="mailto:darengd@outlook.com" method="POST">
+            <fieldset class="fieldset">
+                <legend>Coupon de participation</legend>
+                    <fieldset class="fieldset">
+                        <legend>Nom complet</legend>
+                        
+                        <div class="conteneur__input">
+                            <label for="prenom">Prénom</label>
+                            <input type="text" id="prenom" name="prenom" >                                       
+                        </div>
+
+                            <label for="nom">Nom</label>
+                            <input type="text" id="nom" name="nom" >                 
+                        </div>
+
+                    </fieldset>
+                    <div class="fieldset-contact-interieur">
+                        <div class="conteneur__input">
+                            <label for="rue">Rue</label>
+                            <input type="text" id="rue" name="rue" >                    
+                        </div>
+                        <div class="conteneur__input">
+                            <label for="ville">Ville</label>
+                            <input type="text" id="ville" name="ville" >                    
+                        </div>
+                        <div class="conteneur__input">
+                            <label for="province">Province/états</label>
+                            <select name="province" id="province">
+                                <option class="selectionner__option" value="" selected disabled hidden>--------Sélectionner--------</option>
+                                <option value="quebec">Québec</option>
+                                <option value="ontario">Ontario</option>
+                                <option value="colombie-brittanique">Colombie-Brittanique</option>
+                                <option value="manitoba">Manitoba</option>
+                            </select>                    
+                        </div>
+                        <div class="conteneur__input">
+                            <label for="code-postal">Code postal</label>
+                            <input type="text" id="code-postal" name="code-postal" >                    
+                        </div>
+                        <div class="conteneur__input">
+                            <label for="courriel">Courriel</label>
+                            <input type="email" id="courriel" name="courriel" >                    
+                        </div>                    
+                    </div>
+                    <fieldset>
+                        <legend>Téléphone (indicatif - numéro)</legend>
+                        <div>
+                            <label for="indicatif">indicatif</label>
+                            <input type="number" name="indicatif" id="indicatif">
+
+                            <label for="numero">Numéro</label>
+                            <input type="tel" name="numero" id="numero">
+                        </div>
+                    </fieldset>
+            </fieldset>
+
+            <fieldset class="fieldset"> 
+                    <legend>Question du jour</legend>
+                <fieldset>
+                    <legend>Date à laquelle la question à été posée</legend>
+                    <div class="conteneur__input">
+                        <label for="jour">Jour</label>
+                        <input type="date" name="" id=""> 
+                    </div>
+
+                    <div class="conteneur__input">
+                        <label for="mois">Mois</label>
+                        <input type="number" min="1" max="12" name="mois" id="mois"> 
+                    </div>
+
+                    <div class="conteneur__input">
+                        <label for="annee">Année</label>
+                        <input type="number" min="1900" max="2100" step="1" value="2022" name="annee" id="annee"> 
+                    </div>
+
+                    
+                </fieldset>
+                <fieldset>
+                    <legend>Lequel de ces monuments est un mausolée?</legend>
+                </fieldset>
+            </fieldset>
+
+            <fieldset class="fieldset">
+                <legend>J'aimerais collaborer dans la ou les rubriques suivantes</legend>
+                <div class="conteneur__input">
+                    <input type="checkbox" id="la-grele" name="la-grele" value="La grêle">
+                    <label class="checkbox__label" for="la-grele"> La grêle</label>                    
+                </div>
+
+                <div class="conteneur__input">
+                    <input type="checkbox" id="la-neige" name="la-neige" value="La neige">
+                    <label class="checkbox__label" for="la-neige"> La neige</label>                    
+                </div>
+
+                <div class="conteneur__input">
+                    <input type="checkbox" id="la-pluie" name="la-pluie" value="La pluie">
+                    <label class="checkbox__label" for="la-pluie"> La pluie</label>                    
+                </div>
+
+                <div class="conteneur__input">
+                    <input type="checkbox" id="les-inondations" name="les-inondations" value="les-inondations">
+                    <label class="checkbox__label" for="les-inondations"> Les inondations</label>                    
+                </div>
+
+                <div class="conteneur__input">
+                    <input type="checkbox" id="le-vent" name="le-vent" value="Le vent">
+                    <label class="checkbox__label" for="le-vent"> Le vent</label>                    
+                </div>
+
+                <div class="conteneur__input">
+                    <input type="checkbox" id="les-orages" name="les-orages" value="Les orages">
+                    <label class="checkbox__label" for="les-orages"> Les orages</label>                    
+                </div>
+
+            </fieldset>
+
+            <fieldset class="contact__fieldset">
+                <legend>Expliquez ce qui vous incite à joindre notre équipe</legend>
+                <textarea name="explication" id="explication" cols="30" rows="10">Explication:</textarea>
+            </fieldset>
+
+            <fieldset class="contact__fieldset">
+                <legend>Faites parvenir votre cv au format pdf:</legend>
+                <input type="file">
+            </fieldset>
+            <input class="form__envoyer" type="submit" value="Soumettre votre candidature">
+        </form>
+    </main>
+
+    <footer class="footer">
+        <div></div>
+        <div class="medias-sociaux">
+            <h3>Nos médias sociaux</h3>
+            <ul class="footer__menu">
+                <li class="footer__item"><a class="footer__lien" href="https://fr-ca.facebook.com/"><img class="footer__img" src="../images/facebook.png" alt="Facebook"></a></li>
+                <li class="footer__item"><a class="footer__lien" href="#section2"><img class="footer__img" src="../images/instagram.png" alt="Instagram"></a></li>
+                <li class="footer__item"><a class="footer__lien" href="#section3"><img class="footer__img" src="../images/twitter.png" alt="Twitter"></a></li>
+            </ul>
+        </div>
+        <div class="abonnement-webzine">
+            <h3>Abonnement</h3>
+            <form class="abonnement-webzine__form" action="#">
+                <input class="abonnement-webzine__input" type="email" placeholder="  Inscrire votre courriel"><input class="abonnement-webzine__envoyer" type="submit" value="Envoyer">            
+            </form>
+        </div>
+        <small>&#169; 2021 Daren Garneau-Dionne</small>
+    </footer>   
+</body>
+</html>
