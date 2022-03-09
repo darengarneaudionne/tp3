@@ -4,12 +4,11 @@
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width,initial-scale=1.0">
-    <link rel="icon" href="../images/favicon.png" type="image/png"/>
-    <link rel="shortcut icon" href="../images/favicon.png" type="image/png"/>
+    <link rel="icon" href="favicon.ico" type="image/png"/>
     <meta name="description" content="Mieux comprendre les dangers potentielles des conditions météorologique sur les routes aux Canada">
     <meta name="keywords" content="">
     <link href="../css/styles.css" rel="stylesheet" type="text/css" media="all">
-    <title>Concours - Radio Canada</title> 
+    <title>TP3 – formulaire accessible</title> 
 </head>
 <body class="concours">
     <header>
@@ -19,19 +18,17 @@
             <img src="images/bandeau_1200.jpg" alt="neige-quebec">
         </picture>                  
     </header>
-    <main class="contact__main">
-        <h1 class="titre">Concours</h1> 
-        <p> Complétez le coupon de participation et répondez à la question du jour ci-dessous.</p>
-        <p> 30 finalistes accompagnés seront invités le jeudi 1er mars au restaurant
-            Blumenthal pour un petit déjeuner préparé par le chef Rémi Brunelle. Parmi
-            les finalistes présents, un grand gagnant s’envolera vers la destination de
-            son choix!</p>
-        <p> Vous avez jusqu'au vendredi 9 février à midi pour participer. Bonne chance
-            à tous!</p>
+    <main>
+        <section>
+            <h1 class="titre">Concours</h1> 
+            <p> Complétez le coupon de participation et répondez à la question du jour ci-dessous.</p>
+            <p>30 finalistes accompagnés seront invités le jeudi 1er mars au restaurant Blumenthal pour un petit déjeuner préparé par le chef Rémi Brunelle. Parmi les finalistes présents, un grand gagnant s’envolera vers la destination de son choix!</p>
+            <p>Vous avez jusqu'au vendredi 9 février à midi pour participer. Bonne chance à tous!</p>            
+        </section>
 
-        <form class="contact__form" action="mailto:darengd@outlook.com" method="POST">
+        <form class="concours__form" action="mailto:2065779@csfoy.ca" method="POST">
             <fieldset class="fieldset">
-                <legend>Coupon de participation</legend>
+                <legend><h2>Coupon de participation</h2></legend>
                     <fieldset class="fieldset">
                         <legend>Nom complet</legend>
                         
@@ -104,13 +101,13 @@
                     <legend>Date à laquelle la question à été posée</legend>
                     <div class="conteneur__input">
                         <label for="jour">Jour</label>
-                        <input type="number" min="1" max="31" name="jour" id="jour" required> 
+                        <input id="jour" type="number" min="1" max="31" name="jour" required> 
                     </div>
 
                     <div class="conteneur__input">
                         <label for="mois">Mois</label>
-                        <select name="mois" id="mois" required>
-                            <option class="selectionner__option" value="0" selected>Sélectionner</option>
+                        <select id="mois" name="mois" required>
+                            <option value="" selected>Sélectionner</option>
                             <option value="1">Janvier</option>
                             <option value="2">Février</option>
                             <option value="3">Mars</option>
@@ -128,41 +125,38 @@
 
                     <div class="conteneur__input">
                         <label for="annee">Année</label>
-                        <input type="number" min="1900" max="2100" step="1" value="2022" name="annee" id="annee" required> 
+                        <input id="annee" name="annee" type="number" min="1900" max="2100" step="1" value="2022" required> 
                     </div>
                     <span id="erreurDate" class="zone-champ__message-erreur">Avertissement SVP, entrez la date complète.</span>
                     
                 </fieldset>
                 <fieldset>
                     <legend>Lequel de ces monuments est un mausolée?</legend>
-                    <ul>
+                    <ul class="questionJour__liste">
                         <li>
-                        <input type="radio" id="reglement" name="reglement" value="reglement" required>
-                        <img src="images/chateaudIf-small.jpg" alt="">
-                        <label class="radio__label" for="image3">Le château d'If</label>                               
+                        <input class="questionJour__bouton" type="radio" id="bouton1" name="questionJour" value="Le château d'If" required>
+                        <label class="radio__label" for="bouton1"><img src="images/chateaudIf-small.jpg" alt="">Le château d'If </label>                               
                         </li>
 
                         <li>
-                            <input type="radio" id="reglement" name="reglement" value="reglement">
-                            <img src="images/palaisluxembourg-small.jpg" alt="">
-                            <label class="radio__label" for="reglement">Le palais du Luxembourg</label>                            
+                            <input class="questionJour__bouton" type="radio" id="bouton2" name="questionJour" value="Le palais du Luxembourg">
+                            <label class="radio__label" for="bouton2"><img src="images/palaisluxembourg-small.jpg" alt="">Le palais du Luxembourg</label>                            
                         </li>
     
                         <li>
-                            <input type="radio" id="reglement" name="reglement" value="reglement">
-                            <img src="images/tajmahal-small.jpg" alt="">
-                            <label class="radio__label" for="reglement">Le Taj Mahal</label>                          
+                            <input class="questionJour__bouton" type="radio" id="bouton3" name="questionJour" value="Le Taj Mahal">
+                            <label class="radio__label" for="bouton3"><img src="images/tajmahal-small.jpg" alt="">Le Taj Mahal</label>                          
                         </li>
                     </ul>          
 
-                    <span id="erreurTelephone" class="zone-champ__message-erreur">Avertissement, veuillez répondre à la question du jour.</span>
+                    <span id="erreurQuestionJour" class="zone-champ__message-erreur">Avertissement, veuillez répondre à la question du jour.</span>
                 </fieldset>
             </fieldset>
                 <div class="conteneur__input">
                     <input type="checkbox" id="reglement" name="reglement" value="reglement" required>
                     <label class="checkbox__label" for="reglement">J'ai lu et j'accepte le <a href="#">Règlement du concours</a> et je confirme avoir atteint l'âge de majorité dans ma province de résidence.</label>                    
                 </div>
-                <span id="erreurTelephone" class="zone-champ__message-erreur">Avertissement SVP, acceptez le règlement du concours.</span>
+                <span id="erreurReglement" class="zone-champ__message-erreur">Avertissement SVP, acceptez le règlement du concours.</span>
 
                 <div class="conteneur__input">
                     <input type="checkbox" id="documentation" name="documentation" value="documentation">
