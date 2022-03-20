@@ -1,7 +1,7 @@
 @charset "UTF-8";
 
 /**
- * @author Prénom Nom courriel
+ * @author DarenGarneauDionne courriel
  *
  * TABLE DES MATIERES
  * Normalize
@@ -19,19 +19,19 @@
 
 /* Normalize
    ========================================================================== */
-@import url(_normalize.css);
+@import url(normalize.css);
 
 /* Utilitaires
    ========================================================================== */
-@import url(_utilitaires.css);
+@import url(utilitaires.css);
 
 /* Charte typographique
    ========================================================================== */
- @import url(_typo.css);
+ @import url(typo.css);
 
 /* Grille
    ========================================================================== */
-@import url(_grille.css);
+@import url(grille.css);
 
 /* Mise en page
    ========================================================================== */
@@ -61,10 +61,12 @@ main {
    padding: 1rem;
 }
 
-li input[type=radio] {
+/* Cette stratégie n'est pas accessible.
+   Utiliser plutôt la classe "visuallyhidden" */
+/*li input[type=radio] {
    position: absolute;
    left: -9999px;
-}
+}*/
 
 input[type=radio]:checked + label>img {
    border: 1px solid #fff;

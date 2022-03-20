@@ -85,6 +85,7 @@
                             <div class="province ctnValidation">
                                 <label for="province">Province/états</label>
                                 <select name="province" id="province" required>
+                                    <option value>Sélectionner</option>
                                     <optgroup label="Canada">
                                         <option value="AB">Alberta</option>
                                         <option value="BC">British Columbia</option>
@@ -165,7 +166,11 @@
 
                             <div class="codepostal ctnValidation">
                                 <label for="code-postal">Code postal</label>
-                                <input type="text" id="code-postal" name="code-postal"  pattern="[A-Za-z][0-9][A-Za-z] [0-9][A-Za-z][0-9]" minlength="6" maxlength="6" required>                
+<!--                            suppression des attributs minlength="6" maxlength="6"
+                                en contradiction avec le pattern de 7 caractères  -->
+                                <input type="text" id="code-postal" name="code-postal"
+                                       pattern="[A-Za-z][0-9][A-Za-z] [0-9][A-Za-z][0-9]"
+                                       required>
                             </div>
                             <p class="erreur">
                                 <span class="sreen-reader-only">Avertissement.</span>
@@ -221,7 +226,7 @@
                         <p class="cols_4_de_12">
                             <label for="mois">Mois</label>
                             <select id="mois" name="mois" required>
-                                <option value="" selected>Sélectionner</option>
+                                <option value>Sélectionner</option>
                                 <option value="1">Janvier</option>
                                 <option value="2">Février</option>
                                 <option value="3">Mars</option>
@@ -253,7 +258,7 @@
                         <legend>Lequel de ces monuments est un mausolée?</legend>
                         <ul class="questionJour__liste rangee">
                             <li class="cols_4_de_12">
-                            <input class="questionJour__bouton" type="radio" id="bouton1" name="questionJour" value="Le château d'If" required>
+                            <input class="visuallyhidden" type="radio" id="bouton1" name="questionJour" value="Le château d'If" required>
                             <label class="radio__label" for="bouton1">
                                 <picture>
                                     <source media="(max-width:600px)" srcset="images/chateaudIf.jpg">
@@ -265,7 +270,7 @@
                             </li>
 
                             <li class="cols_4_de_12">
-                                <input class="questionJour__bouton" type="radio" id="bouton2" name="questionJour" value="Le palais du Luxembourg">
+                                <input class="visuallyhidden" type="radio" id="bouton2" name="questionJour" value="Le palais du Luxembourg">
                                 <label class="radio__label" for="bouton2">
                                     <picture>
                                         <source media="(max-width:600px)" srcset="images/palaisluxembourg.jpg">
@@ -277,7 +282,7 @@
                             </li>
         
                             <li class="cols_4_de_12">
-                                <input class="questionJour__bouton" type="radio" id="bouton3" name="questionJour" value="Le Taj Mahal">
+                                <input class="visuallyhidden" type="radio" id="bouton3" name="questionJour" value="Le Taj Mahal">
                                 <label class="radio__label" for="bouton3">
                                     <picture>
                                         <source media="(max-width:600px)" srcset="images/tajmahal.jpg">
